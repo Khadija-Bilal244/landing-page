@@ -1,13 +1,18 @@
+import NexusLogo from "../assets/NexusLogo.png";
+
 function Navbar() {
   return (
     <nav className="navbar">
-      <h2>Brand</h2>
+      <img className="navbar-logo" src={NexusLogo} alt="Nexus Accountants" />
 
       <ul>
         <li>Home</li>
-        <li>Services</li>
         <li>About</li>
-        <li>Contact</li>
+        <li>Sectors</li>
+        <li>Services</li>
+        <li>Blog</li>
+        <li>Pricing</li>
+        <li>Portfolio</li>
       </ul>
     </nav>
   );

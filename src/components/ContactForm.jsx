@@ -24,6 +24,7 @@ function ContactForm() {
 
   return (
     <form onSubmit={handleSubmit}>
+      <h2>Enter your Details</h2>
       <input type="text" name="name" placeholder="Enter your Name " onChange={handleChange}></input> 
       <input type="email" name="email" placeholder="Enter your email " onChange={handleChange}></input> 
 
