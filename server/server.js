@@ -1,7 +1,8 @@
+// server.js
 import express from "express";
 import cors from "cors";
 import "./db.js";
-import Contact from "./models/Contact.js";
+import Contact from "./models/Contact.js";  
 
 const app = express();
 
@@ -11,6 +12,8 @@ app.use(express.json());
 app.post("/contact", async (req, res) => {
   try {
     const { name, email, message } = req.body;
+
+    console.log("Received data:", { name, email, message }); 
 
     if (!name || !email || !message) {
       return res.status(400).json({ 
@@ -31,6 +34,8 @@ app.post("/contact", async (req, res) => {
       email,
       message
     });
+    
+    console.log("Contact object:", contact); 
     
     await contact.save();
     
