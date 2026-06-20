@@ -1,6 +1,6 @@
 
 import ContactForm from "./ContactForm";
-import heroBgImage from "../assets/hero-bg.jpg";
+import heroBgImage from "../assets/hero-bg.png";
 
 function Contact() {
   return (

@@ -5,7 +5,7 @@ function Hero() {
       <div className="hero-title">
         <h1>NEXUS ACCOUNTANTS</h1>
         <h2>& TAXATION LTD</h2>
-      </div>
+   
 
       <div className="hero-cards">
         <div>
@@ -30,6 +30,7 @@ function Hero() {
             We aim to work with you to plan your tax affairs, maximize your
             wealth and provide you with peace of mind.
           </p>
+        </div>
         </div>
       </div>
     </section>
