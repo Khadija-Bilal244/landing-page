@@ -5,12 +5,15 @@ import TrustedBanner from "./TrustedBanner";
 import Slider from "./Slider";
 import ContactForm from "./ContactForm";
 import FAQSection from "./FAQSection";
-
+import PopularServices from "./PopularServices";
+import ImpactStats from "./ImpactSales";
 function Home() {
   return (
     <>
       <Hero />
       <Superiority />
+      <PopularServices/>
+      <ImpactStats/>
       <TrustedBanner />
       <Slider />
       <ContactForm />

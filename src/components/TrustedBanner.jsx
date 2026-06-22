@@ -7,6 +7,9 @@ import logo41 from "../assets/logo41.png";
 import logo43 from "../assets/logo43.png";
 import logo45 from "../assets/logo45.png";
 import logo46 from "../assets/logo46.png";
+import logo40 from "../assets/logo40.png";
+import logo42 from "../assets/logo42.png";
+import logo44 from "../assets/logo44.png";
 
 function TrustedBanner() {
   const logos = [
@@ -18,6 +21,9 @@ function TrustedBanner() {
     { id: 6, name: "AATT", image: logo43 },
     { id: 7, name: "CAPIUM", image: logo45 },
     { id: 8, name: "Xero", image: logo46 },
+    { id: 9, name: "Xero", image: logo40 },
+    { id: 10, name: "Dext", image: logo42 },
+    { id: 11, name: "Hubdoc", image: logo44 },
   ];
 
   return (
