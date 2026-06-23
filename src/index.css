@@ -1069,7 +1069,7 @@ form button:active {
 
 .popular-services .services-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(300px, 1fr)) !important;
+  grid-template-columns: repeat(3, minmax(300px, 1fr));
   gap: 30px;
   margin-top: 30px;
   justify-content: center;
@@ -1259,6 +1259,19 @@ form button:active {
     padding: 3px 10px;
   }
 }
+
+/* Force single column on narrow devices */
+@media (max-width: 420px) {
+  .popular-services .services-grid {
+    grid-template-columns: 1fr !important;
+    gap: 16px;
+  }
+
+  .popular-services .service-video-wrapper {
+    height: 160px;
+  }
+}
+
 /* ===== TRUSTED BANNER ===== */
 .trusted-banner {
   background: linear-gradient(135deg, #f8f9fa 0%, #e8f0fe 100%);
