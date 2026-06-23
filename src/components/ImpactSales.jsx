@@ -1,4 +1,8 @@
 import React from "react";
+import r1 from "../assets/r1.png";
+import r2 from "../assets/r2.png";
+import r3 from "../assets/r3.png";
+import r4 from "../assets/r4.png";
 
 function ImpactStats() {
   const stats = [
@@ -6,25 +10,25 @@ function ImpactStats() {
       id: 1,
       number: "25+",
       label: "Years of Experience",
-      icon: "fa-solid fa-calendar-check"
+      icon: r1
     },
     {
       id: 2,
       number: "500+",
       label: "Happy Clients",
-      icon: "fa-solid fa-users"
+      icon: r2
     },
     {
       id: 3,
       number: "6",
       label: "Employees",
-      icon: "fa-solid fa-user-tie"
+      icon: r3
     },
     {
       id: 4,
       number: "02",
       label: "Office: United Kingdom",
-      icon: "fa-solid fa-building"
+      icon: r4
     }
   ];
 
@@ -46,7 +50,7 @@ function ImpactStats() {
           {stats.map((stat) => (
             <div key={stat.id} className="stat-card">
               <div className="stat-icon">
-                <i className={stat.icon}></i>
+                <img src={stat.icon} alt={stat.label} />
               </div>
               <div className="stat-number">{stat.number}</div>
               <div className="stat-label">{stat.label}</div>

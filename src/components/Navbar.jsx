@@ -24,16 +24,19 @@ function Navbar() {
         <span></span>
       </button>
 
-      <ul className={`navbar-links ${isOpen ? "open" : ""}`}>
-        <li><NavLink to="/" end onClick={closeMenu}>Home</NavLink></li>
-        <li><NavLink to="/about" onClick={closeMenu}>About</NavLink></li>
-        <li><NavLink to="/sectors" onClick={closeMenu}>Sectors</NavLink></li>
-        <li><NavLink to="/services" onClick={closeMenu}>Services</NavLink></li>
-        <li><NavLink to="/blog" onClick={closeMenu}>Blog</NavLink></li>
-        <li><NavLink to="/pricing" onClick={closeMenu}>Pricing</NavLink></li>
-        <li><NavLink to="/portfolio" onClick={closeMenu}>Portfolio</NavLink></li>
-        <li><NavLink to="/contact" onClick={closeMenu}>Contact</NavLink></li>
-      </ul>
+      {/* Mobile & Desktop menu - now using navbar-links div wrapper */}
+      <div className={`navbar-links ${isOpen ? "open" : ""}`}>
+        <ul>
+          <li><NavLink to="/" end onClick={closeMenu}>Home</NavLink></li>
+          <li><NavLink to="/about" onClick={closeMenu}>About</NavLink></li>
+          <li><NavLink to="/sectors" onClick={closeMenu}>Sectors</NavLink></li>
+          <li><NavLink to="/services" onClick={closeMenu}>Services</NavLink></li>
+          <li><NavLink to="/blog" onClick={closeMenu}>Blog</NavLink></li>
+          <li><NavLink to="/pricing" onClick={closeMenu}>Pricing</NavLink></li>
+          <li><NavLink to="/portfolio" onClick={closeMenu}>Portfolio</NavLink></li>
+          <li><NavLink to="/contact" onClick={closeMenu}>Contact</NavLink></li>
+        </ul>
+      </div>
     </nav>
   );
 }
