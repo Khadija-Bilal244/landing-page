@@ -5,6 +5,7 @@ import h3 from "../assets/h3.png";
 import h4 from "../assets/h4.png";
 import h5 from "../assets/h5.png";
 import h6 from "../assets/h6.png";
+import "../styles/WhyChooseNexus.css";
 
 function WhyChooseNexus() {
   const features = [

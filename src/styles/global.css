@@ -1,0 +1,14 @@
+/* ============================================
+   GLOBAL CSS - Import all shared styles
+   ============================================ */
+
+/* 1. Base styles (variables, animations, resets) */
+@import url("./base.css");
+
+/* 2. Page-specific styles (About, Services, Pricing, Contact pages) */
+@import url("./pages.css");
+
+/* 3. All responsive media queries */
+@import url("./responsive.css");
+
+/* Note: Component-specific CSS is imported directly in their JSX files */

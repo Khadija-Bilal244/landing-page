@@ -10,6 +10,7 @@ import logo46 from "../assets/logo46.png";
 import logo40 from "../assets/logo40.png";
 import logo42 from "../assets/logo42.png";
 import logo44 from "../assets/logo44.png";
+import "../styles/TrustedBanner.css";
 
 function TrustedBanner() {
   const logos = [

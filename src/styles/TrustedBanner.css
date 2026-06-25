@@ -1,0 +1,124 @@
+/* ===== TRUSTED BANNER ===== */
+.trusted-banner {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e8f0fe 100%);
+  padding: 50px 10% 60px;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  position: relative;
+}
+
+.trusted-banner-header {
+  text-align: center;
+  margin-bottom: 35px;
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+.trusted-banner-header h3 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 8px;
+  position: relative;
+  display: inline-block;
+}
+
+.trusted-banner-header h3::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(to right, #04f7ff, #0272bd);
+  border-radius: 2px;
+}
+
+.trusted-banner-header p {
+  font-size: 16px;
+  color: #666;
+  margin-top: 15px;
+}
+
+.trusted-banner-track-wrapper {
+  overflow: hidden;
+  position: relative;
+  left: 50%;
+  width: 100vw;
+  margin-left: -50vw;
+  padding: 20px 0;
+  background: linear-gradient(90deg, #11d9d2 0%, #0876b5 100%);
+}
+
+.trusted-banner-track {
+  display: flex;
+  width: max-content;
+  will-change: transform;
+  animation: trusted-marquee 26s linear infinite;
+}
+
+.trusted-banner-group {
+  display: flex;
+  flex-shrink: 0;
+  gap: 50px;
+  padding-right: 50px;
+}
+
+.trusted-logo-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-width: 100px;
+  cursor: default;
+  user-select: none;
+}
+
+.logo-circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  border: 2px solid rgba(0, 0, 0, 0.04);
+  padding: 15px;
+}
+
+.logo-circle:hover {
+  transform: scale(1.08) translateY(-5px);
+  box-shadow: 0 10px 35px rgba(2, 114, 189, 0.2);
+  border-color: #0272bd;
+  background: #f8fbff;
+}
+
+.trusted-logo-item .logo-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.logo-circle:hover .logo-image {
+  transform: scale(1.05);
+}
+
+.trusted-logo-item .logo-name {
+  font-size: 13px;
+  font-weight: 600;
+  color: #1a1a1a;
+  text-align: center;
+  letter-spacing: 0.3px;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.trusted-logo-item:hover .logo-name {
+  opacity: 1;
+  color: #0272bd;
+}

@@ -1,5 +1,6 @@
 
 import NexusLogo from "../assets/NexusLogo.png";
+import "../styles/Footer.css";
 
 function Footer() {
   return (

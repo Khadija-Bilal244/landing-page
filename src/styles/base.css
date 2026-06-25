@@ -1,0 +1,170 @@
+/* ============================================
+   BASE CSS - Global styles, animations, variables
+   ============================================ */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #ffffff;
+  color: #16213e;
+  overflow-x: hidden;
+}
+
+main {
+  min-height: 60vh;
+}
+
+/* ===== KEYFRAMES ===== */
+@keyframes slideDown {
+  0% { opacity: 0; transform: translateY(-20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUp {
+  0% { opacity: 1; transform: translateY(0); }
+  100% { opacity: 0; transform: translateY(-20px); }
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(10px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+  40% { transform: translateY(-20px); }
+  60% { transform: translateY(-10px); }
+}
+
+@keyframes rotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes scaleIn {
+  0% { transform: scale(0.8); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes slideInLeft {
+  0% { transform: translateX(-50px); opacity: 0; }
+  100% { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideInRight {
+  0% { transform: translateX(50px); opacity: 0; }
+  100% { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes trusted-marquee {
+  from { transform: translate3d(0, 0, 0); }
+  to { transform: translate3d(-50%, 0, 0); }
+}
+
+/* ===== GLOBAL BUTTONS ===== */
+button {
+  border: none;
+  border-radius: 6px;
+  padding: 12px 24px;
+  background-color: #0f8cc4;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+  background-color: #11315e;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+/* ===== PAGE WRAPPER ===== */
+.page-wrapper {
+  background: #f4f4fb;
+  color: #16213e;
+  min-height: 60vh;
+}
+
+.about-page,
+.services-page,
+.pricing-page,
+.contact-page {
+  background: #f4f7fb;
+  color: #16213e;
+}
+
+/* ===== CONTAINER ===== */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ===== SECTION TITLES ===== */
+.section-title {
+  font-size: 42px;
+  font-weight: 700;
+  color: #000000;
+  text-align: center;
+  margin-bottom: 50px;
+  position: relative;
+  display: inline-block;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 70px;
+  height: 4px;
+  background: linear-gradient(to right, #04f7ff, #0272bd);
+  border-radius: 2px;
+}
+
+/* ===== RESPONSIVE SECTION TITLES ===== */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 30px;
+    margin-bottom: 35px;
+  }
+  .section-title::after {
+    width: 50px;
+    height: 3px;
+    bottom: -10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 26px;
+    margin-bottom: 30px;
+  }
+}

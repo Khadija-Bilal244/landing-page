@@ -1,5 +1,6 @@
 
 import sectorsImage from "../assets/whowehelp-sectors.png";
+import "../styles/Sectors.css";
 
 function Sectors() {
   const sectors = [

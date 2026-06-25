@@ -1,0 +1,129 @@
+/* ===== SUPERIORITY SECTION ===== */
+.superiority-section {
+  padding: 70px 10% 80px;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e8f0fe 100%);
+  position: relative;
+  overflow: hidden;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.superiority-section:hover {
+  padding: 70px 10% 80px;
+  background: linear-gradient(to right, #04f7ff, #0272bd);
+  position: relative;
+  overflow: hidden;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.superiority-section:hover h2 {
+  color: white;
+}
+
+.superiority-container {
+  max-width: 1700px;
+  margin: 0 auto;
+}
+
+.superiority-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+.superiority-text {
+  flex: 1.2;
+  animation: slideInLeft 0.7s ease-in-out;
+}
+
+.superiority-title {
+  font-size: 40px;
+  font-weight: 700;
+  color: black;
+  margin-bottom: 25px;
+  position: relative;
+  padding-bottom: 18px;
+}
+
+.superiority-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(to right, #04f7ff, #0272bd);
+  border-radius: 2px;
+  animation: slideInLeft 0.5s ease-in-out;
+}
+
+.superiority-text p {
+  font-size: 18px;
+  line-height: 1.9;
+  color: black;
+  text-align: justify;
+  margin: 0;
+  word-spacing: 0.5px;
+}
+
+/* ===== SUPERIORITY IMAGE SLIDER ===== */
+.superiority-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: slideInRight 0.7s ease-in-out;
+}
+
+.superiority-image-slider {
+  position: relative;
+  width: 100%;
+  max-width: 620px;
+  overflow: hidden;
+  border-radius: 16px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+}
+
+.superiority-slide-image {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  display: block;
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+.superiority-dots {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 12px;
+  z-index: 10;
+  padding: 8px 16px;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+  backdrop-filter: blur(4px);
+}
+
+.superiority-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.superiority-dot:hover {
+  background: rgba(255, 255, 255, 0.8);
+  transform: scale(1.2);
+}
+
+.superiority-dot.active {
+  background: #ffffff;
+  border-color: #0272bd;
+  transform: scale(1.1);
+  width: 30px;
+  border-radius: 10px;
+}

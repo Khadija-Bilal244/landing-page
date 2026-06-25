@@ -1,5 +1,6 @@
 
 import pricingImage from "../assets/pricing.png";
+import "../styles/Pricing.css";
 
 function Pricing() {
   const plans = [

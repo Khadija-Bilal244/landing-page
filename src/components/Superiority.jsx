@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import superiorityImage1 from "../assets/vision1.png";
 import superiorityImage2 from "../assets/vision2.png";
 import superiorityImage3 from "../assets/vision3.png";
+import "../styles/Superiority.css";
 
 function Superiority() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);

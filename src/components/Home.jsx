@@ -8,6 +8,7 @@ import FAQSection from "./FAQSection";
 import PopularServices from "./PopularServices";
 import ImpactStats from "./ImpactSales";
 import WhyChooseNexus from "./WhyChooseNexus";
+import "../styles/Home.css";
 function Home() {
   return (
     <>

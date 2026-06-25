@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import "../styles/FAQSection.css";
 
 function FAQSection() {
   const [activeIndex, setActiveIndex] = useState(null);

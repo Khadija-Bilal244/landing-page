@@ -1,5 +1,6 @@
 
 import blogImage from "../assets/blog.png";
+import "../styles/Blog.css";
 
 function Blog() {
   const blogPosts = [

@@ -10,6 +10,7 @@ import Blog from "./components/Blog";
 import Pricing from "./components/Pricing";
 import Portfolio from "./components/Portfolio";
 import Contact from "./components/Contact";
+import "./styles/global.css";
 
 function App() {
   return (

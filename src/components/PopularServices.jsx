@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
+import "../styles/PopularServices.css";
 
 // Import videos from assets folder
 import F1 from "../assets/F1.mp4";

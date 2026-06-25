@@ -1,5 +1,6 @@
 
 import portfolioImage from "../assets/portfolio.png";
+import "../styles/Portfolio.css";
 
 function Portfolio() {
   const projects = [

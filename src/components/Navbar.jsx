@@ -1,6 +1,7 @@
 import { Link, NavLink } from "react-router-dom";
 import { useState } from "react";
 import NexusLogo from "../assets/NexusLogo.png";
+import "../styles/Navbar.css";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);

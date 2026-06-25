@@ -1,0 +1,145 @@
+/* ===== SLIDER / REVIEWS SECTION ===== */
+.slider {
+  padding: 55px 6% 70px;
+  background: linear-gradient(120deg, #11d9d2, #0876b5);
+  display: flex;
+  flex-direction: column;
+  border: 5px solid rgb(14, 5, 144);
+  border-radius: 14px;
+  align-items: center;
+  gap: 34px;
+  position: relative;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.slider h2 {
+  font-size: 44px;
+  color: #000000;
+  text-align: center;
+}
+
+.slider-line {
+  width: 75px;
+  height: 5px;
+  background-color: #ffffff;
+}
+
+.slider-wrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  position: relative;
+}
+
+.review-list {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 70px;
+  flex: 1;
+}
+
+.review-card {
+  min-height: 360px;
+  padding: 34px 32px;
+  background-color: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.14);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: scaleIn 0.6s ease-in-out;
+}
+
+.review-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.review-card h3 {
+  min-height: 62px;
+  font-size: 24px;
+  line-height: 1.35;
+  color: #000000;
+}
+
+.review-card span {
+  white-space: nowrap;
+}
+
+.review-card hr {
+  margin: 18px 0;
+  border: none;
+  border-top: 2px solid #000000;
+}
+
+.review-card p {
+  font-size: 20px;
+  line-height: 1.45;
+  color: black;
+}
+
+.slider-btn {
+  width: 50px;
+  height: 50px;
+  border: none;
+  border-radius: 50%;
+  background-color: #ffffff;
+  color: #0272bd;
+  font-size: 32px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  flex-shrink: 0;
+  z-index: 10;
+}
+
+.slider-btn:hover {
+  background-color: #0272bd;
+  transform: scale(1.1);
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.25);
+}
+
+.slider-btn:active {
+  transform: scale(0.95);
+}
+
+.slider-dots {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+  padding: 10px 0;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  padding: 0;
+  flex-shrink: 0;
+}
+
+.dot:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+  transform: scale(1.2);
+}
+
+.dot.active {
+  background-color: #ffffff;
+  width: 35px;
+  border-radius: 20px;
+  transform: scale(1);
+}

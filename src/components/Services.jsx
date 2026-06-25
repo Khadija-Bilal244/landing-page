@@ -1,5 +1,6 @@
 
 import servicesImage from "../assets/services.png";
+import "../styles/Services.css";
 
 function Services() {
   const coreServices = [
