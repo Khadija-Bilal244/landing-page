@@ -12,11 +12,11 @@ const Team = () => {
 
  const teamMembers = [
   { id: 1, img: team45, name: 'M Shahid', role: 'Founder & CEO' },
-  { id: 2, img: team46, name: 'Ruqqaiya', role: 'Senior Accountant' },
+  { id: 2, img: team46, name: 'Ruqqaiya Raza', role: 'Senior Accountant' },
   { id: 3, img: team47, name: 'Ali Akram', role: 'Investment Advisor & Financial Modelling Analyst' },
   { id: 4, img: team48, name: 'Rehan Farooq', role: 'Senior Accountant' },
   { id: 5, img: team50, name: 'Tanvir Chaudhary', role: 'Senior Accountant' },
-  { id: 6, img: team51, name: 'Mehreen', role: 'Semi-Senior Accountant' },
+  { id: 6, img: team51, name: 'Mehreen Tanvir', role: 'Semi-Senior Accountant' },
 ];
 
   return (
