@@ -8,6 +8,7 @@ import FAQSection from "./FAQSection";
 import PopularServices from "./PopularServices";
 import ImpactStats from "./ImpactSales";
 import WhyChooseNexus from "./WhyChooseNexus";
+import Sectors from "./Sectors";
 import "../styles/Home.css";
 function Home() {
   return (
@@ -17,6 +18,7 @@ function Home() {
       <Superiority />
       <PopularServices/>
       <ImpactStats/>
+      <Sectors/>
       <TrustedBanner />
       <Slider />
       <ContactForm />

@@ -1,1 +1,124 @@
-/* Styles for Sectors component */
+/* ===== SECTORS PAGE ===== */
+.sectors-page {
+  background: #ffffff;
+  color: #16213e;
+  min-height: 100vh;
+}
+
+/* ===== SECTORS HEADER ===== */
+.sectors-header {
+  padding: 60px 8% 40px;
+  text-align: center;
+  background: #ffffff;
+}
+
+.sectors-header h1 {
+  font-size: clamp(28px, 4vw, 48px);
+  font-weight: 800;
+  color: #000000;
+  margin-bottom: 16px;
+  line-height: 1.2;
+}
+
+.sectors-header p {
+  font-size: clamp(15px, 1.5vw, 18px);
+  color: #555555;
+  max-width: 680px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* ===== SECTORS IMAGE GRID ===== */
+.sectors-image-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 16px;
+  padding: 20px 10% 60px;
+}
+
+/* ===== EACH SECTOR BOX ===== */
+.sector-box {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 1 / 1;
+  cursor: pointer;
+  border-radius:8px;
+}
+
+.sector-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+/* ===== HOVER OVERLAY ===== */
+.sector-box-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(10, 20, 40, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+.sector-box:hover .sector-box-overlay {
+  opacity: 1;
+}
+
+.sector-box:hover img {
+  transform: scale(1.07);
+}
+
+.sector-box-overlay h5 {
+  color: #ffffff;
+  font-size: clamp(13px, 1.4vw, 20px);
+  font-weight: 700;
+  text-align: center;
+  padding: 0 10px;
+  line-height: 1.4;
+  letter-spacing: 0.3px;
+  transition: font-size 0.3s ease; 
+}
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1200px) {
+  .sectors-image-grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .sectors-image-grid {
+    grid-template-columns: repeat(4, 1fr);
+    padding: 16px 8% 50px;
+  }
+
+  .sectors-header {
+    padding: 50px 6% 30px;
+  }
+}
+
+@media (max-width: 650px) {
+  .sectors-image-grid {
+    grid-template-columns: repeat(3, 1fr);
+    padding: 12px 6% 40px;
+  }
+
+  .sectors-header {
+    padding: 40px 5% 24px;
+  }
+}
+
+@media (max-width: 420px) {
+  .sectors-image-grid {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 10px 5% 30px;
+  }
+
+  .sector-box-overlay h5 {
+    font-size: 15px;
+  }
+}
