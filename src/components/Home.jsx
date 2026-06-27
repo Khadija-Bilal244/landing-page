@@ -9,6 +9,7 @@ import ImpactStats from "./ImpactSales";
 import WhyChooseNexus from "./WhyChooseNexus";
 import Sectors from "./Sectors";
 import GdprTrusted from "./GdprTrusted";
+import Team from "./Team";
 import "../styles/Home.css";
 function Home() {
   return (
@@ -20,6 +21,7 @@ function Home() {
       <ImpactStats/>
       <Sectors/>
       <GdprTrusted/>
+      <Team/>
       <Slider />
       <ContactForm />
       <FAQSection />
