@@ -1,4 +1,3 @@
-/* ===== SLIDER / REVIEWS SECTION ===== */
 .slider {
   padding: 55px 6% 70px;
   background: linear-gradient(120deg, #11d9d2, #0876b5);
@@ -47,7 +46,6 @@
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.14);
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  /* animation removed to prevent blink on prev/next */
 }
 
 .review-card:hover {
@@ -98,7 +96,8 @@
 }
 
 .slider-btn:hover {
-  background-color: #0272bd;
+  background-color: #ffffff;
+  color: #0272bd;
   transform: scale(1.1);
   box-shadow: 0 6px 25px rgba(0, 0, 0, 0.25);
 }
@@ -140,4 +139,110 @@
   width: 35px;
   border-radius: 20px;
   transform: scale(1);
+}
+
+@media (max-width: 768px) {
+  .slider {
+    padding: 40px 4% 60px;
+  }
+
+  .slider h2 {
+    font-size: 28px;
+  }
+
+  .slider-wrapper {
+    gap: 0;
+    padding: 0 10px;
+  }
+
+  .review-list {
+    grid-template-columns: 1fr;
+    gap: 0;
+    padding: 0 35px;
+  }
+
+  .review-card {
+    min-height: 280px;
+    padding: 24px 20px;
+  }
+
+  .review-card h3 {
+    font-size: 20px;
+    min-height: 50px;
+  }
+
+  .review-card p {
+    font-size: 16px;
+  }
+
+  .slider-btn {
+    width: 36px;
+    height: 36px;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 20;
+    flex-shrink: 0;
+  }
+
+  .slider-btn.prev-btn {
+    left: 0;
+  }
+
+  .slider-btn.next-btn {
+    right: 0;
+  }
+
+  .slider-btn:hover {
+    transform: translateY(-50%) scale(1.1);
+  }
+
+  .slider-btn:active {
+    transform: translateY(-50%) scale(0.95);
+  }
+
+  .slider-dots {
+    gap: 8px;
+    margin-top: 20px;
+  }
+
+  .dot {
+    width: 10px;
+    height: 10px;
+  }
+
+  .dot.active {
+    width: 28px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .review-list {
+    gap: 30px;
+  }
+
+  .review-card {
+    min-height: 320px;
+    padding: 28px 24px;
+  }
+
+  .review-card h3 {
+    font-size: 20px;
+    min-height: 54px;
+  }
+
+  .review-card p {
+    font-size: 17px;
+  }
+
+  .slider-btn {
+    width: 45px;
+    height: 45px;
+    font-size: 28px;
+  }
+
+  .slider h2 {
+    font-size: 34px;
+  }
 }

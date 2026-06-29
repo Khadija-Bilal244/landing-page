@@ -90,17 +90,35 @@ function Slider() {
     setIndex((prev) => (prev - 1 + reviews.length) % reviews.length);
   }, []);
 
-  // Auto-advance; resets whenever index changes (including manual nav)
   useEffect(() => {
     const timer = setInterval(nextSlide, 4000);
     return () => clearInterval(timer);
   }, [index, nextSlide]);
 
-  const visibleReviews = [
-    { ...reviews[index], slot: 0 },
-    { ...reviews[(index + 1) % reviews.length], slot: 1 },
-    { ...reviews[(index + 2) % reviews.length], slot: 2 },
-  ];
+  const getVisibleReviews = () => {
+    const isMobile = window.innerWidth <= 768;
+    const count = isMobile ? 1 : 3;
+    const visible = [];
+    for (let i = 0; i < count; i++) {
+      const reviewIndex = (index + i) % reviews.length;
+      visible.push({ ...reviews[reviewIndex], slot: i });
+    }
+    return visible;
+  };
+
+  const [visibleReviews, setVisibleReviews] = useState(getVisibleReviews());
+
+  useEffect(() => {
+    const handleResize = () => {
+      setVisibleReviews(getVisibleReviews());
+    };
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, [index]);
+
+  useEffect(() => {
+    setVisibleReviews(getVisibleReviews());
+  }, [index]);
 
   return (
     <div className="slider">
