@@ -64,7 +64,7 @@ function ContactForm() {
       </div>
 
       {/* Form Card */}
-      <div className="contact-wrapper">
+      <div className="contact-page-container">
         <form onSubmit={handleSubmit}>
           <div className="form-row">
             <div className="field-group">
