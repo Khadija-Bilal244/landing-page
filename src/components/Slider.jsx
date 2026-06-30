@@ -9,7 +9,7 @@ const reviews = [
   },
   {
     name: "Easy Goods LTD",
-    stars: "★★★★★",
+    stars: "★★★★☆",
     text: "I am glad to work with a professional, dedicated and dynamic team. Very knowledgeable regarding all accounting and taxation issues. Always willing to help and guide me in my business. I would highly recommend Nexus accountants and taxation."
   },
   {
@@ -29,7 +29,7 @@ const reviews = [
   },
   {
     name: "Shoaib Khalid",
-    stars: "★★★★★",
+    stars: "★★★★☆",
     text: "Your team has been exceptional in handling financial matters. From expert tax advice to efficient bookkeeping, I appreciate your professionalism and dedication. You've made the process stress-free, and I highly recommend your services to others seeking reliable financial expertise. Keep up the excellent work!"
   },
   {
@@ -49,12 +49,12 @@ const reviews = [
   },
   {
     name: "Danish Ansari",
-    stars: "★★★★★",
+    stars: "★★★☆☆",
     text: "Excellent service, prompt communication. Any queries and requests responded to immediately. Professional advice on taxation matters. One of the best there is."
   },
   {
     name: "Gabriel de-Vere",
-    stars: "★★★★★",
+    stars: "★★★☆☆",
     text: "Been working with Imran since 2012 and he is an absolute brilliant and great accountant! Can not recommend enough!"
   },
   {
@@ -76,6 +76,16 @@ const reviews = [
     name: "Zaheer Babar",
     stars: "★★★★★",
     text: "Very satisfied with the services, professionally dealt with. Highly Recommended."
+  },
+  {
+    name: "Dirtshoo Cleaning Services",
+    stars: "★★★★☆",
+    text: "I am extremely delighted to write a review about Nexus Accountants & Taxation Limited. The team at Nexus Accountants is highly professional and always meet your expectations. Since time plays a significant role when filing your Tax Returns, Nexus will always take care of it and let you feel in safe hands."
+  },
+  {
+    name:"Mónika Kreknyák",
+    stars:"★★★★☆",
+    text:"I started to work with Nexus accounts about a year ago, and I am very pleased with the service. Easy commi, very reliable and punctual. I would highly recommend them for personal and business related services."
   }
 ];
 
@@ -120,6 +130,22 @@ function Slider() {
     setVisibleReviews(getVisibleReviews());
   }, [index]);
 
+  // Get dots to show (show limited dots like in the image)
+  const getDotsToShow = () => {
+    const totalDots = reviews.length;
+    const maxDots = 7; // Show max 7 dots like in the image
+    if (totalDots <= maxDots) {
+      return reviews.map((_, i) => i);
+    }
+    
+    const dots = [];
+    const start = Math.max(0, Math.min(index - 3, totalDots - maxDots));
+    for (let i = start; i < start + maxDots && i < totalDots; i++) {
+      dots.push(i);
+    }
+    return dots;
+  };
+
   return (
     <div className="slider">
       <h2>Don't just take our words for it - Take theirs!</h2>
@@ -148,11 +174,12 @@ function Slider() {
       </div>
 
       <div className="slider-dots">
-        {reviews.map((_, i) => (
-          <span
-            key={i}
-            className={`dot ${i === index ? "active" : ""}`}
-            onClick={() => setIndex(i)}
+        {getDotsToShow().map((dotIndex) => (
+          <button
+            key={dotIndex}
+            className={`dot ${dotIndex === index ? "active" : ""}`}
+            onClick={() => setIndex(dotIndex)}
+            aria-label={`Go to slide ${dotIndex + 1}`}
           />
         ))}
       </div>
