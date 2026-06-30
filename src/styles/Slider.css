@@ -203,17 +203,63 @@
   }
 
   .slider-dots {
-    gap: 8px;
-    margin-top: 20px;
+    gap: 4px;
+    margin-top: 18px;
+    padding: 0 4px;
   }
 
   .dot {
-    width: 10px;
-    height: 10px;
+    width: 6px;
+    height: 6px;
   }
 
   .dot.active {
-    width: 28px;
+    width: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .slider {
+    padding: 32px 4% 50px;
+  }
+
+  .slider h2 {
+    font-size: 24px;
+  }
+
+  .review-card {
+    min-height: 260px;
+    padding: 20px 16px;
+  }
+
+  .review-card h3 {
+    font-size: 17px;
+    min-height: 44px;
+  }
+
+  .review-card p {
+    font-size: 14px;
+  }
+
+  .slider-btn {
+    width: 30px;
+    height: 30px;
+    font-size: 16px;
+  }
+
+  .slider-dots {
+    gap: 2px;
+    margin-top: 6px;
+    padding: 0 2px;
+  }
+
+  .dot {
+    width: 2px;
+    height: 2px;
+  }
+
+  .dot.active {
+    width: 5px;
   }
 }
 

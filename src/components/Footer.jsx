@@ -39,7 +39,7 @@ function Footer() {
             rel="noopener noreferrer" aria-label="TikTok">
             <i className="fab fa-tiktok"></i>
           </a>
-          <a href="youtube.com/@muhammadimranshahid589" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+          <a href="https://www.youtube.com/@muhammadimranshahid589" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
             <i className="fab fa-youtube"></i>
           </a>
         </div>
