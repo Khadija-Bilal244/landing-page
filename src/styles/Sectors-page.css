@@ -1,0 +1,88 @@
+.portfolio {
+  background-color: #f9f9f9;
+  overflow-x: hidden;
+}
+
+.sectors-grid-section {
+  margin-top: 40px;
+  padding-top: 20px;
+}
+
+.portfolio-description-content {
+  display: flex;
+  align-items: flex-start;
+  margin: 2rem auto;
+  max-width: 1100px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  transition: all 0.5s ease-in-out;
+  position: relative;
+  padding: 20px;
+}
+
+.portfolio-description-img {
+  max-width: 300px;
+  width: 100%;
+  margin-right: 2.5rem;
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+}
+
+.right-image {
+  max-width: 300px;
+  width: 100%;
+  margin-left: 2.5rem;
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+  order: 2;
+  border-color: rgb(4, 247, 255);
+}
+
+.portfolio-description-content:hover {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  border: 2px solid rgb(4, 247, 255);
+}
+
+.portfolio-description-text {
+  text-align: justify;
+  padding: 15px;
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+}
+
+.portfolio-description-text:hover {
+  border: 2px solid rgb(4, 247, 255);
+  box-shadow: 0 10px 20px rgb(4, 247, 255);
+}
+
+.portfolio-description-img:hover,
+.right-image:hover {
+  transform: scale(1.05) rotate(3deg);
+  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.2);
+  border: 2px solid rgb(4, 247, 255);
+  border-radius: 15px;
+}
+
+.right-image:hover {
+  transform: scale(1.05) rotate(3deg);
+  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.2);
+  border: 2px solid rgb(4, 247, 255);
+  border-radius: 15px;
+}
+
+@media (max-width: 768px) {
+  .portfolio-description-content {
+    flex-direction: column;
+    padding: 15px;
+    max-width: 100%;
+  }
+
+  .portfolio-description-img,
+  .right-image {
+    margin: 0 0 1.5rem 0;
+    max-width: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    order: 0;
+  }
+}

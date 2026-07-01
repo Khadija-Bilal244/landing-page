@@ -1,6 +1,6 @@
 //About.jsx
 import React, { useState } from "react";
-import Back from "../common/Back";
+import Back from "../Back/Back";
 import Heading from "../common/Heading";
 import img from "../assets/about.jpeg";
 import Img6 from "../assets/story.jpeg";

@@ -4,7 +4,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Home from "./components/Home";
 import About from "./components/About";
-import Sectors from "./components/Sectors";
+import Sectors from "./components/Sectors-page";
 import Services from "./components/Services";
 import Blog from "./components/Blog";
 import Pricing from "./components/Pricing";
