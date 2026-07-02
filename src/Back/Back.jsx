@@ -1,4 +1,4 @@
-// Back.jsx
+
 import React from "react";
 import "./Back.css";
 

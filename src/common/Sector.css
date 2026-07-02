@@ -1,4 +1,9 @@
-/* Sector.css - Unique class names to avoid conflicts */
+.sector-back,
+.sector-back-img,
+.sector-back-overlay {
+  width: 100% !important;
+  max-width: 100% !important;
+}
 .sector-back {
   width: 100%;
   min-height: 650px;
@@ -7,6 +12,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  max-width: 100%;
 }
 
 .sector-back-img {
@@ -24,7 +30,7 @@
   z-index: 1;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.7);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -33,11 +39,12 @@
   padding: 40px 60px;
   box-sizing: border-box;
   min-height: 650px;
+  width: 100%;
 }
 
 .sector-back-name {
   color: #04f7ff !important;
-  font-size: 1.1rem;
+  font-size: 55px;
   letter-spacing: 1px;
   text-transform: uppercase;
   margin-bottom: 10px;
@@ -49,7 +56,8 @@
 
 .sector-back-title {
   color: #ffffff !important;
-  font-size: 45px;
+  font-size: 47px;
+  letter-spacing: 0.3px;
   font-weight: 800;
   margin: 0 0 20px 0;
   text-shadow: 
@@ -130,32 +138,42 @@
   }
 }
 
+/* ============ MOBILE FIXES - FULL WIDTH ============ */
 @media screen and (max-width: 768px) {
   .sector-back {
     min-height: 500px;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
   }
 
   .sector-back-overlay {
-    padding: 25px 30px;
+    padding: 30px 20px;
     min-height: 500px;
     background: rgba(0, 0, 0, 0.75);
+    width: 100%;
+    max-width: 100%;
   }
 
   .sector-back-img {
     object-position: center;
+    width: 100%;
+    max-width: 100%;
   }
 
   .sector-back-title {
-    font-size: 2.2rem !important;
+    font-size: 37px;
   }
 
   .sector-back-name {
-    font-size: 0.95rem;
+    font-size: 35px;
   }
 
   .sector-back-typewriter-container {
     max-width: 100%;
     padding: 0 10px;
+    width: 100%;
   }
 
   .sector-back-typewriter-line {
@@ -167,28 +185,63 @@
 @media screen and (max-width: 480px) {
   .sector-back {
     min-height: 420px;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
   }
 
   .sector-back-overlay {
-    padding: 18px 20px;
+    padding: 20px 15px;
     min-height: 420px;
     background: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    max-width: 100%;
   }
 
   .sector-back-img {
     object-position: center;
+    width: 100%;
+    max-width: 100%;
   }
 
   .sector-back-title {
-    font-size: 1.6rem !important;
+    font-size: 28px;
+    margin-bottom: 10px;
   }
 
   .sector-back-name {
-    font-size: 0.85rem;
+    font-size: 27px;
+  }
+
+  .sector-back-typewriter-container {
+    max-width: 100%;
+    padding: 0 5px;
+    width: 100%;
   }
 
   .sector-back-typewriter-line {
     font-size: 0.85rem !important;
     line-height: 1.5;
+  }
+}
+
+/* Extra small devices */
+@media screen and (max-width: 360px) {
+  .sector-back {
+    min-height: 380px;
+  }
+
+  .sector-back-overlay {
+    padding: 15px 10px;
+    min-height: 380px;
+  }
+
+  .sector-back-title {
+    font-size: 1.3rem !important;
+  }
+
+  .sector-back-typewriter-line {
+    font-size: 0.75rem !important;
   }
 }

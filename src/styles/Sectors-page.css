@@ -1,6 +1,10 @@
 .portfolio {
   background-color: #f9f9f9;
   overflow-x: hidden;
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 .sectors-grid-section {
@@ -84,5 +88,16 @@
     width: 100%;
     box-sizing: border-box;
     order: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .portfolio {
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  
+  .portfolio-description-content {
+    padding: 10px;
   }
 }

@@ -1,4 +1,4 @@
-// Heading.jsx
+
 import React from "react";
 import "./Heading.css";
 

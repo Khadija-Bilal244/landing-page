@@ -1,4 +1,4 @@
-/* Back.css */
+
 .back {
   width: 100%;
   min-height: 650px;
@@ -7,6 +7,8 @@
   display: flex;
   align-items: flex-end;
   justify-content: flex-start;
+  margin: 0 !important;
+  padding: 0 !important;
 }
 
 .back-img {
@@ -57,14 +59,23 @@
 @media screen and (max-width: 768px) {
   .back {
     min-height: 450px;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border-radius: 0 !important;
   }
 
   .back-overlay {
     padding: 25px 30px;
+    width: 100% !important;
+    max-width: 100% !important;
   }
 
   .back-img {
     object-position: center 22%;
+    width: 100% !important;
+    max-width: 100% !important;
   }
 
   .back-title {
@@ -79,14 +90,22 @@
 @media screen and (max-width: 480px) {
   .back {
     min-height: 380px;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
   }
 
   .back-overlay {
     padding: 18px 20px;
+    width: 100% !important;
+    max-width: 100% !important;
   }
 
   .back-img {
     object-position: center 25%;
+    width: 100% !important;
+    max-width: 100% !important;
   }
 
   .back-title {
