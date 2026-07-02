@@ -3,6 +3,9 @@
   grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
   padding: 2rem;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
 }
 
 .animated-image-container {
@@ -12,7 +15,19 @@
   height: auto;
   opacity: 0;
   transform: translateY(50px);
-  animation: fadeInUp 0.5s ease-in-out forwards;
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.animated-image-container.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.animated-image-container.hidden {
+  opacity: 0;
+  transform: translateY(50px);
 }
 
 .animated-image {
@@ -20,77 +35,76 @@
   height: auto;
   border-radius: 10px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.4s ease-in-out;
+  display: block;
 }
 
 .animated-image-container:hover .animated-image {
   transform: scale(1.05);
 }
 
+/* Overlay - only at bottom as a gradient banner */
 .overlay {
   position: absolute;
-  top: 0;
+  bottom: 0;
   left: 0;
+  right: 0;
   width: 100%;
-  height: 100%;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.85) 0%,
+    rgba(0, 0, 0, 0.5) 50%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  padding: 40px 20px 20px 20px;
+  box-sizing: border-box;
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 0 0 10px 10px;
+  pointer-events: none;
+}
+
+/* Full overlay on hover */
+.animated-image-container:hover .overlay {
   background: rgba(0, 0, 0, 0.6);
+  top: 0;
+  bottom: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  opacity: 0;
-  transition: opacity 0.3s ease-in-out;
   padding: 20px;
-  box-sizing: border-box;
+  border-radius: 10px;
 }
 
 .overlay-text {
   text-align: center;
   color: #fff;
+  width: 100%;
 }
 
 .overlay-text h3 {
-  font-size: 1.5rem;
-  margin: 0.5rem 0;
+  font-size: 1.2rem;
+  margin: 0.5rem 0 0.2rem 0;
+  font-weight: 600;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
 }
 
 .overlay-text p {
-  font-size: 1.5rem;
+  font-size: 1rem;
   margin: 0;
+  font-weight: 400;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+  opacity: 0.8;
 }
 
-.animated-image-container:hover .overlay {
-  opacity: 1;
+/* On hover - show full overlay with centered text */
+.animated-image-container:hover .overlay-text h3 {
+  font-size: 1.4rem;
 }
 
-@keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    transform: translateY(50px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes fadeOutDown {
-  0% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  100% {
-    opacity: 0;
-    transform: translateY(50px);
-  }
-}
-
-.animated-image-container[data-visible="true"] {
-  animation-name: fadeInUp;
-}
-
-.animated-image-container[data-visible="false"] {
-  animation-name: fadeOutDown;
+.animated-image-container:hover .overlay-text p {
+  font-size: 1.1rem;
 }
 
 /* ============ MOBILE RESPONSIVE ============ */
@@ -101,11 +115,23 @@
     padding: 1.5rem;
   }
 
+  .overlay {
+    padding: 30px 15px 15px 15px;
+  }
+
   .overlay-text h3 {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
 
   .overlay-text p {
+    font-size: 0.9rem;
+  }
+
+  .animated-image-container:hover .overlay-text h3 {
+    font-size: 1.2rem;
+  }
+
+  .animated-image-container:hover .overlay-text p {
     font-size: 1rem;
   }
 }
@@ -117,32 +143,8 @@
     padding: 1rem;
   }
 
-  .overlay-text h3 {
-    font-size: 1rem;
-  }
-
-  .overlay-text p {
-    font-size: 0.85rem;
-  }
-
   .overlay {
-    padding: 10px;
-  }
-
-  .animated-image-container:hover .animated-image {
-    transform: none;
-  }
-
-  .animated-image-container:hover .overlay {
-    opacity: 1;
-  }
-}
-
-@media (max-width: 480px) {
-  .animated-images {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-    padding: 0.8rem;
+    padding: 25px 12px 12px 12px;
   }
 
   .overlay-text h3 {
@@ -153,7 +155,61 @@
     font-size: 0.75rem;
   }
 
+  .animated-image-container:hover .animated-image {
+    transform: none;
+  }
+
+  .animated-image-container:hover .overlay {
+    background: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.85) 0%,
+      rgba(0, 0, 0, 0.5) 50%,
+      rgba(0, 0, 0, 0) 100%
+    );
+    top: auto;
+    bottom: 0;
+    display: block;
+    padding: 25px 12px 12px 12px;
+    border-radius: 0 0 10px 10px;
+  }
+
+  .animated-image-container:hover .overlay-text h3 {
+    font-size: 0.9rem;
+  }
+
+  .animated-image-container:hover .overlay-text p {
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .animated-images {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 0.8rem;
+  }
+
   .overlay {
-    padding: 8px;
+    padding: 20px 10px 10px 10px;
+  }
+
+  .overlay-text h3 {
+    font-size: 0.85rem;
+  }
+
+  .overlay-text p {
+    font-size: 0.7rem;
+  }
+
+  .animated-image-container:hover .overlay {
+    padding: 20px 10px 10px 10px;
+  }
+
+  .animated-image-container:hover .overlay-text h3 {
+    font-size: 0.85rem;
+  }
+
+  .animated-image-container:hover .overlay-text p {
+    font-size: 0.7rem;
   }
 }

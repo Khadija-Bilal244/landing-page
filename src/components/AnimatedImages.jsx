@@ -40,29 +40,55 @@ const imageData = [
 
 const AnimatedImages = () => {
   const containerRefs = useRef([]);
+  const animationFrameRef = useRef(null);
 
   useEffect(() => {
     const handleScroll = () => {
-      containerRefs.current.forEach((container) => {
-        if (container) {
-          const rect = container.getBoundingClientRect();
-          const visible = rect.top >= 0 && rect.top <= window.innerHeight;
-          container.setAttribute("data-visible", visible ? "true" : "false");
-        }
+      // Use requestAnimationFrame for smoother performance
+      if (animationFrameRef.current) {
+        cancelAnimationFrame(animationFrameRef.current);
+      }
+
+      animationFrameRef.current = requestAnimationFrame(() => {
+        containerRefs.current.forEach((container) => {
+          if (container) {
+            const rect = container.getBoundingClientRect();
+            const windowHeight = window.innerHeight;
+            
+            // Image becomes visible when it enters the viewport
+            // and stays visible until it's completely out of view
+            const isVisible = rect.top < windowHeight + 100 && rect.bottom > -100;
+            
+            // Add a small delay for smoother transition
+            if (isVisible) {
+              container.classList.remove('hidden');
+              container.classList.add('visible');
+            } else {
+              container.classList.remove('visible');
+              container.classList.add('hidden');
+            }
+          }
+        });
       });
     };
 
-    window.addEventListener("scroll", handleScroll);
-    // Initial check
-    handleScroll();
+    // Initial check after mount
+    setTimeout(handleScroll, 100);
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    window.addEventListener("resize", handleScroll, { passive: true });
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("resize", handleScroll);
+      if (animationFrameRef.current) {
+        cancelAnimationFrame(animationFrameRef.current);
+      }
     };
   }, []);
 
   return (
-    <div className="animated-images">
+    <div className="animated-images" style={{ overflow: "hidden" }}>
       {imageData.map((image, index) => (
         <div
           ref={(el) => (containerRefs.current[index] = el)}
@@ -73,6 +99,7 @@ const AnimatedImages = () => {
             src={image.src}
             alt={`Image ${index + 1}`}
             className="animated-image"
+            loading="lazy"
           />
           <div className="overlay">
             <div className="overlay-text">

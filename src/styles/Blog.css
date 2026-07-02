@@ -1,3 +1,14 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
 .blog {
   background-color: #fff;
   width: 100%;
@@ -459,21 +470,22 @@
     padding: 10px;
   }
 
-  .room-content:hover {
-    box-shadow: none;
-    border: none;
+  .room-content {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    border: 2px solid rgb(4, 247, 255);
+    border-radius: 10px;
   }
 
-  .room-text:hover {
-    border: none;
-    box-shadow: none;
+  .room-text {
+    border: 2px solid rgb(4, 247, 255);
+    box-shadow: 0 8px 15px rgba(4, 247, 255, 0.25);
   }
 
-  .room-img:hover,
-  .room-right-img:hover {
-    transform: none;
-    box-shadow: none;
-    border: none;
+  .room-img,
+  .room-right-img {
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+    border: 2px solid rgb(4, 247, 255);
+    border-radius: 12px;
   }
 
   .blog-description-content {
@@ -493,20 +505,21 @@
     padding: 10px;
   }
 
-  .blog-description-content:hover {
-    box-shadow: none;
-    border: none;
+  .blog-description-content {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    border: 2px solid rgb(4, 247, 255);
+    border-radius: 10px;
   }
 
-  .blog-description-text:hover {
-    border: none;
-    box-shadow: none;
+  .blog-description-text {
+    border: 2px solid rgb(4, 247, 255);
+    box-shadow: 0 8px 15px rgba(4, 247, 255, 0.25);
   }
 
-  .blog-description-img:hover {
-    transform: none;
-    box-shadow: none;
-    border: none;
+  .blog-description-img {
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+    border: 2px solid rgb(4, 247, 255);
+    border-radius: 12px;
   }
 }
 

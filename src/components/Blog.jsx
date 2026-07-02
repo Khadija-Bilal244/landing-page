@@ -1,5 +1,5 @@
 import React from "react";
-import SectorBack from "../common/Sector.jsx";
+import SectorBack from "../common/Sector";
 import descriptionImg from "../assets/blog1a.png";
 import descriptionImg6 from "../assets/conference.jpeg";
 import descriptionImg7 from "../assets/conference1.png";
@@ -14,11 +14,12 @@ import vlog1 from "../assets/vlog1.mp4";
 import vlog2 from "../assets/vlog2.mp4";
 import vlog3 from "../assets/vlog3.mp4";
 
-const valueText="At our financial management service, we understand the importance of staying on top of your finances. We are here to help you reach your financial goals with professionalism & expertise."
+const valueText = "At our financial management service, we understand the importance of staying on top of your finances. We are here to help you reach your financial goals with professionalism & expertise.";
+
 const Blog = () => {
   return (
-    <section className="blog mb" style={{ padding: 0, margin: 0, width: "100%", maxWidth: "100%" }}>
-       <div style={{ width: "100%", maxWidth: "100%", margin: 0, padding: 0 }}>
+    <section className="blog">
+      <div style={{ width: "100%", maxWidth: "100%", margin: 0, padding: 0 }}>
         <SectorBack
           title="Grow your business with us"
           cover={img}
@@ -62,7 +63,6 @@ const Blog = () => {
             className="video-item"
           >
             <source src={vlog1} type="video/mp4" />
-            Your browser does not support the video tag.
           </video>
           <video
             src={vlog2}
@@ -73,7 +73,6 @@ const Blog = () => {
             className="video-item"
           >
             <source src={vlog2} type="video/mp4" />
-            Your browser does not support the video tag.
           </video>
           <video
             src={vlog3}
@@ -84,7 +83,6 @@ const Blog = () => {
             className="video-item"
           >
             <source src={vlog3} type="video/mp4" />
-            Your browser does not support the video tag.
           </video>
         </div>
         <div className="video-section-border"></div>
@@ -132,10 +130,7 @@ const Blog = () => {
               In July 2024, our esteemed founder, M. Shahid, was invited to
               the prestigious UK International Lawyers Club to participate in
               a vital discussion addressing the challenges faced by overseas
-              Pakistanis. The event brought together leading professionals
-              from various sectors to explore practical solutions for these
-              challenges and to emphasize the role of international
-              professionals in assisting overseas Pakistanis.
+              Pakistanis.
             </p>
           </div>
         </div>
@@ -154,9 +149,7 @@ const Blog = () => {
                 Providing expert guidance on tax planning and compliance.
               </li>
               At Nexus Accountants, we are committed to supporting overseas
-              Pakistanis by offering expert financial services that simplify
-              their lives and empower them to thrive both locally and
-              internationally.
+              Pakistanis by offering expert financial services.
             </p>
           </div>
           <img
