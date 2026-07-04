@@ -1,1 +1,355 @@
-/* Styles for Pricing component */
+.pricing {
+  background-color: #fff;
+}
+
+.description {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 20px;
+}
+
+.description-content {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  border: 3px solid transparent;
+  border-radius: 20px;
+  padding: 2rem;
+  background: #fff;
+  transition: box-shadow 0.35s ease, border-color 0.35s ease;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.description-img {
+  max-width: 220px;
+  width: 100%;
+  flex-shrink: 0;
+  transition: filter 0.35s ease;
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Nested text card with its own thinner border, matching the reference layout */
+.description-text {
+  flex: 1;
+  font-size: 1.25rem;
+  line-height: 1.6;
+  font-weight: 500;
+  text-align: justify;
+  border: 2px solid transparent;
+  border-radius: 15px;
+  padding: 1.5rem 2rem;
+  background: #fff;
+  transition: box-shadow 0.35s ease, border-color 0.35s ease;
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-select: none;
+}
+@media (hover: hover) and (pointer: fine) {
+  .description-content:hover {
+    border-color: rgb(4, 247, 255);
+    box-shadow: 0 0 25px rgba(4, 247, 255, 0.5);
+  }
+
+  .description-content:hover .description-text {
+    border-color: rgb(4, 247, 255);
+    box-shadow: 0 0 18px rgba(4, 247, 255, 0.35);
+  }
+
+  .description-content:hover .description-img {
+    filter: brightness(1.15);
+  }
+}
+
+/* Touch devices: glow shows only while actively pressing anywhere in
+   the box (including directly on the pound icon), and clears the
+   instant you release - no stuck state. */
+.description-content:active {
+  border-color: rgb(4, 247, 255);
+  box-shadow: 0 0 25px rgba(4, 247, 255, 0.5);
+}
+
+.description-content:active .description-text {
+  border-color: rgb(4, 247, 255);
+  box-shadow: 0 0 18px rgba(4, 247, 255, 0.35);
+}
+
+.description-content:active .description-img {
+  filter: brightness(1.15);
+}
+
+/* Pricing Section */
+.pricing-section {
+  padding: 4rem 0;
+  background-color: #fff;
+  text-align: center;
+}
+
+.pricing-title {
+  font-size: 3rem;
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+  color: black;
+  position: relative;
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+.pricing-section-border {
+  margin-left: 100px;
+  margin-right: 100px;
+  height: 10px;
+  background: linear-gradient(to right, rgb(4, 247, 255), #0272bd);
+}
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.pricing-item {
+  background: linear-gradient(145deg, #ffffff, #e6e6e6);
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s ease-in-out;
+  cursor: pointer;
+  position: relative;
+  transform: perspective(800px) rotateY(0deg);
+  transform-style: preserve-3d;
+}
+
+.pricing-item h3 {
+  font-size: 2rem;
+  margin-bottom: 0.2rem;
+}
+
+.pricing-item h4 {
+  font-size: 1.5rem;
+  margin-bottom: 0.2rem;
+}
+
+.pricing-item p {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 1.2rem;
+  font-weight: 400;
+}
+
+.pricing-item ul {
+  list-style: none;
+  padding: 0;
+}
+
+.pricing-item li {
+  margin-bottom: 0.8rem;
+  font-size: 1.2rem;
+  color: #333;
+  font-family: "Roboto", sans-serif;
+}
+
+/* Hover Effect - Unique Gradient & Rotate Animation */
+.pricing-item:hover,
+.pricing-item:active {
+  transform: rotateY(360deg) scale(1.05);
+  background: linear-gradient(to right, rgb(4, 247, 255), #0272bd);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+}
+
+.pricing-item::before {
+  content: "";
+  position: absolute;
+  top: -10%;
+  left: -10%;
+  width: 120%;
+  height: 120%;
+  background: linear-gradient(45deg, #0272bd, rgb(4, 247, 255));
+  border-radius: 50%;
+  transform: scale(0);
+  transition: transform 0.4s ease;
+  z-index: -1;
+}
+
+.pricing-item:hover::before,
+.pricing-item:active::before {
+  transform: scale(1);
+}
+
+.pricing-item:hover h3,
+.pricing-item:active h3 {
+  color: #fff;
+}
+.pricing-item:hover h4,
+.pricing-item:active h4 {
+  color: #fff;
+}
+
+.pricing-item:hover p,
+.pricing-item:active p {
+  color: #fff;
+  font-weight: bold;
+}
+
+.pricing-item:hover li,
+.pricing-item:active li {
+  color: #fff;
+}
+
+/* ============================= */
+/* Media Queries for Responsiveness */
+/* ============================= */
+
+/* Tablets / small laptops */
+@media (max-width: 1024px) {
+  .pricing-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  .pricing-title {
+    font-size: 2.3rem;
+  }
+
+  .pricing-section-border {
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+
+  .description-content {
+    gap: 1.5rem;
+    padding: 1.5rem;
+  }
+
+  .description-img {
+    max-width: 180px;
+  }
+
+  .description-text {
+    font-size: 1.1rem;
+    padding: 1.25rem 1.5rem;
+  }
+}
+
+/* Tablets / large phones */
+@media (max-width: 768px) {
+  .pricing-section {
+    padding: 2.5rem 0;
+  }
+
+  .pricing-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 0 15px;
+  }
+
+  .pricing-title {
+    font-size: 1.8rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .pricing-section-border {
+    margin-left: 20px;
+    margin-right: 20px;
+    height: 8px;
+  }
+
+  .pricing-item {
+    padding: 1.5rem;
+  }
+
+  .pricing-item h3 {
+    font-size: 1.6rem;
+  }
+
+  .pricing-item h4 {
+    font-size: 1.2rem;
+  }
+
+  .pricing-item p,
+  .pricing-item li {
+    font-size: 1rem;
+  }
+
+  .description {
+    padding: 2rem 15px;
+  }
+
+  .description-content {
+    flex-direction: column; /* Stack vertically */
+    padding: 1.5rem;
+    border-radius: 16px;
+  }
+
+  /* Reorder: text first, image second */
+  .description-text {
+    order: 1; /* Text appears first */
+    text-align: justify;
+    font-size: 1rem;
+    padding: 1.25rem;
+    border-radius: 12px;
+    margin-bottom: 0.5rem;
+  }
+
+  .description-img {
+    order: 2; /* Image appears second (below text) */
+    max-width: 140px;
+    margin: 0 auto; /* Center the image */
+  }
+
+  /* Simplify the 3D hover flip on touch devices - it doesn't
+     translate well without a mouse and can feel glitchy on tap */
+  .pricing-item:hover,
+  .pricing-item:active {
+    transform: scale(1.02);
+  }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+  .pricing-title {
+    font-size: 1.4rem;
+    letter-spacing: 0.05em;
+  }
+
+  .pricing-section-border {
+    margin-left: 10px;
+    margin-right: 10px;
+    height: 6px;
+  }
+
+  .pricing-item {
+    padding: 1.2rem;
+  }
+
+  .pricing-item h3 {
+    font-size: 1.3rem;
+  }
+
+  .pricing-item h4 {
+    font-size: 1.05rem;
+  }
+
+  .pricing-item p,
+  .pricing-item li {
+    font-size: 0.9rem;
+  }
+
+  .description-content {
+    padding: 1.1rem;
+  }
+
+  .description-text {
+    font-size: 0.95rem;
+    padding: 1rem;
+  }
+
+  .description-img {
+    max-width: 110px;
+  }
+}

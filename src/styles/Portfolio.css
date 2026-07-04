@@ -1,1 +1,251 @@
-/* Styles for Portfolio component */
+
+.portfolio-section {
+  background-color: #fff;
+}
+
+.portfolio-content {
+  display: flex;
+  align-items: flex-start;
+  margin: 2rem auto;
+  max-width: 1100px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  transition: all 0.5s ease-in-out;
+  position: relative;
+  padding: 20px;
+}
+
+.portfolio-img {
+  max-width: 350px;
+  width: 100%;
+  margin-right: 1rem;
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+}
+.portfolio-section-border2 {
+  margin-left: 100px;
+  margin-right: 100px;
+  margin-bottom: 3%;
+  height: 10px;
+  background: linear-gradient(to right, rgb(4, 247, 255), #0272bd);
+}
+.portfolio-section-border {
+  margin-top: 2%;
+  margin-left: 100px;
+  margin-right: 100px;
+  margin-bottom: 3%;
+  height: 10px;
+  background: linear-gradient(to right, rgb(4, 247, 255), #0272bd);
+}
+.portfolio-right-img {
+  max-width: 350px;
+  width: 100%;
+  margin-right: 2.5rem;
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+  border-color: rgb(4, 247, 255); /* Updated border color to blue */
+}
+
+/* Hover and Border Animation for Description Sections */
+.portfolio-content:hover {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  border: 2px solid rgb(4, 247, 255);
+}
+
+.portfolio-text {
+  font-size: 18px;
+  text-align: justify;
+  padding: 15px;
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+}
+
+.portfolio-text:hover {
+  border: 2px solid rgb(4, 247, 255);
+  box-shadow: 0 10px 20px rgb(4, 247, 255);
+}
+
+/* Image Hover Animation with Scale and Rotate */
+.portfolio-img:hover,
+.portfolio-right-img:hover {
+  transform: scale(1.05) rotate(3deg); /* New hover effect */
+  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.2);
+  border: 2px solid rgb(4, 247, 255);
+  border-radius: 15px;
+}
+
+/* New Points Section */
+.portfolio-points {
+  background-color: #fff;
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.portfolio-points-intro p {
+  font-size: 1.3rem;
+  color: black;
+  margin-bottom: 1.5rem;
+  margin-right: 4rem;
+  margin-left: 4rem;
+  transition: color 0.3s ease;
+}
+
+.portfolio-points-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  margin-right: 4rem;
+  margin-left: 4rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.portfolio-points-list li {
+  font-size: 1.1rem;
+  color: white;
+  padding: 0.5rem 1.5rem;
+  margin: 0.5rem;
+  background: #0272bd;
+  border: 2px solid rgb(15, 255, 223);
+  border-radius: 8px;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+}
+
+.portfolio-points-list li:hover {
+  background-color: rgb(15, 255, 223);
+  color: black;
+  box-shadow: 0 5px 10px rgb(82, 81, 81);
+  transform: translateY(-5px);
+  border-color: #0272bd;
+}
+
+/* ============================= */
+/* Responsive styles             */
+/* ============================= */
+
+/* Tablets and small laptops */
+@media (max-width: 1024px) {
+  .portfolio-content {
+    max-width: 90%;
+  }
+
+  .portfolio-section-border,
+  .portfolio-section-border2 {
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+
+  .portfolio-points-intro p,
+  .portfolio-points-list {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+}
+
+/* Tablets / large phones */
+@media (max-width: 768px) {
+  .portfolio-content {
+    flex-direction: column;
+    padding: 0;
+    margin: 1.5rem 0;
+    font-size: 1rem;
+    max-width: 100% !important;
+    width: 100%;
+  }
+  .portfolio-content.second-description {
+    flex-direction: column;
+  }
+
+  .portfolio-img,
+  .portfolio-right-img {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 0 1.5rem 0 !important;
+  }
+
+  .portfolio-text {
+    padding: 15px;
+    font-size: 1rem;
+  }
+
+  .portfolio-section-border,
+  .portfolio-section-border2 {
+    margin-left: 20px;
+    margin-right: 20px;
+    height: 8px;
+  }
+
+  .portfolio-points {
+    padding: 1.5rem 0;
+  }
+
+  .portfolio-points-intro p {
+    font-size: 1.1rem;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+  }
+
+  .portfolio-points-list {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+  }
+
+  .portfolio-points-list li {
+    font-size: 1rem;
+    padding: 0.45rem 1.1rem;
+  }
+
+  /* Tone down hover-only effects that feel awkward on touch devices */
+  .portfolio-img:hover,
+  .portfolio-right-img:hover {
+    transform: scale(1.02);
+  }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+  .portfolio-content {
+    padding: 0;
+    margin: 1rem 0;
+    font-size: 0.95rem;
+    max-width: 100% !important;
+    width: 100%;
+  }
+
+  .portfolio-img,
+  .portfolio-right-img {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 0 1rem 0 !important;
+  }
+
+  .portfolio-text {
+    font-size: 0.95rem;
+    padding: 15px;
+  }
+
+  .portfolio-section-border,
+  .portfolio-section-border2 {
+    margin-left: 10px;
+    margin-right: 10px;
+    height: 6px;
+  }
+
+  .portfolio-points-intro p {
+    font-size: 1rem;
+    margin-left: 0.75rem;
+    margin-right: 0.75rem;
+  }
+
+  .portfolio-points-list {
+    margin-left: 0.75rem;
+    margin-right: 0.75rem;
+  }
+
+  .portfolio-points-list li {
+    font-size: 0.9rem;
+    padding: 0.4rem 0.9rem;
+    margin: 0.35rem;
+  }
+}
