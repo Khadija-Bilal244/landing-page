@@ -14,17 +14,36 @@ html, body {
   width: 100%;
   max-width: 100%;
   overflow-x: hidden;
-  padding: 0;
+  padding: 0 !important;
   margin: 0;
 }
 
-/* Ensure Back component is full width */
-.blog .back {
+/* Mobile-specific override to cancel global section padding */
+@media screen and (max-width: 768px) {
+  .blog {
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+}
+
+/* Ensure SectorBack hero image is full width */
+.blog .sector-back {
   width: 100% !important;
   max-width: 100% !important;
   margin: 0 !important;
   padding: 0 !important;
   border-radius: 0 !important;
+}
+
+.blog .sector-back-img {
+  width: 100% !important;
+  max-width: 100% !important;
+  display: block;
+}
+
+.blog .sector-back-img {
+  width: 100% !important;
+  max-width: 100% !important;
 }
 
 .blog-description-content {
@@ -40,7 +59,7 @@ html, body {
 }
 
 .blog-description-img {
-  max-width: 300px;
+  max-width: 100%;
   width: 100%;
   margin-right: 2.5rem;
   border-radius: 10px;
@@ -339,7 +358,16 @@ html, body {
   border: 2px solid rgb(4, 247, 255);
   box-shadow: 0 10px 20px rgb(4, 247, 255);
 }
+.room-list {
+  list-style-position: inside;
+  padding-left: 0;
+  margin: 10px 0;
+  text-align: left;
+}
 
+.room-list li {
+  margin-bottom: 8px;
+}
 .room-img:hover,
 .room-right-img:hover {
   transform: scale(1.05) rotate(3deg);

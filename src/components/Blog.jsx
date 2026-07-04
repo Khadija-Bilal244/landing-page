@@ -4,7 +4,7 @@ import descriptionImg from "../assets/blog1a.png";
 import descriptionImg6 from "../assets/conference.jpeg";
 import descriptionImg7 from "../assets/conference1.png";
 import descriptionImg8 from "../assets/conference2.png";
-import img from "../assets/blog.png";
+import img from "../assets/blog-mobile.png";
 import Heading from "../common/Heading";
 import CardBlog from "./CardBlog";
 import AnimatedImages from "./AnimatedImages";
@@ -100,7 +100,7 @@ const Blog = () => {
       {/* Conference Section */}
       <section className="conference-section">
         <div className="conference-section-border"></div>
-        
+
         <div className="conference-image-container">
           <img
             src={descriptionImg6}
@@ -111,7 +111,7 @@ const Blog = () => {
             UK, International Lawyers Club London Annual Conference 2024
           </h1>
         </div>
-        
+
         <div className="conference-section-border"></div>
 
         <div className="room-content">
@@ -121,33 +121,34 @@ const Blog = () => {
             className="room-img"
           />
           <div className="room-text">
-            <p>
-              <b>
-                Nexus Accountants Founder Attended UK International Lawyers
-                Club London Annual Conference 2024
-              </b>
-              <br />
-              In July 2024, our esteemed founder, M. Shahid, was invited to
-              the prestigious UK International Lawyers Club to participate in
-              a vital discussion addressing the challenges faced by overseas
-              Pakistanis.
-            </p>
-          </div>
-        </div>
-        
-        <div className="room-content second-description">
-          <div className="room-text">
-            <p>
-              <b>M. Shahid highlighted key concerns such as:</b>
-              <br />
-              <li> Navigating legal and financial complexities abroad.</li>
+            <b>M. Shahid highlighted key concerns such as:</b>
+            <ul className="room-list">
+              <li>Navigating legal and financial complexities abroad.</li>
               <li>
                 Facilitating seamless financial management for Pakistanis
                 living overseas.
               </li>
+              <li>Providing expert guidance on tax planning and compliance.</li>
+            </ul>
+            <p>
+              At Nexus Accountants, we are committed to supporting overseas
+              Pakistanis by offering expert financial services.
+            </p>
+          </div>
+        </div>
+
+        <div className="room-content second-description">
+          <div className="room-text">
+            <b>M. Shahid highlighted key concerns such as:</b>
+            <ul className="room-list">
+              <li>Navigating legal and financial complexities abroad.</li>
               <li>
-                Providing expert guidance on tax planning and compliance.
+                Facilitating seamless financial management for Pakistanis
+                living overseas.
               </li>
+              <li>Providing expert guidance on tax planning and compliance.</li>
+            </ul>
+            <p>
               At Nexus Accountants, we are committed to supporting overseas
               Pakistanis by offering expert financial services.
             </p>
@@ -159,7 +160,7 @@ const Blog = () => {
           />
         </div>
       </section>
-      
+
       <AnimatedImages />
     </section>
   );
