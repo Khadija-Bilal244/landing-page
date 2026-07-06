@@ -28,6 +28,61 @@
   line-height: 1.7;
 }
 
+/* ===== CAFE & RESTAURANT SPECIALIZATION SECTION ===== */
+.cafe-specialization-section {
+  padding: 0 10% 50px;
+}
+
+.cafe-specialization-content {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  background: #f9fafb;
+  border-radius: 16px;
+  padding: 32px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+
+.cafe-specialization-img {
+  width: 40%;
+  max-width: 260px;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  border-radius: 0;
+  flex-shrink: 0;
+}
+
+.cafe-specialization-text {
+  flex: 1;
+}
+
+.cafe-specialization-tag {
+  display: inline-block;
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  color: #fff;
+  background: linear-gradient(to right, rgb(4, 247, 255), #0272bd);
+  padding: 6px 16px;
+  border-radius: 20px;
+  margin-bottom: 14px;
+}
+
+.cafe-specialization-text h2 {
+  font-size: clamp(22px, 2.6vw, 32px);
+  font-weight: 700;
+  color: #000000;
+  margin: 0 0 14px;
+  line-height: 1.2;
+}
+
+.cafe-specialization-text p {
+  font-size: clamp(14px, 1.3vw, 16px);
+  color: #555555;
+  line-height: 1.7;
+  margin: 0;
+}
+
 /* ===== SECTORS IMAGE GRID ===== */
 .sectors-image-grid {
   display: grid;
@@ -98,6 +153,21 @@
 
   .sectors-header {
     padding: 50px 6% 30px;
+  }
+
+  .cafe-specialization-section {
+    padding: 0 6% 40px;
+  }
+
+  .cafe-specialization-content {
+    flex-direction: column;
+    padding: 24px;
+    gap: 24px;
+  }
+
+  .cafe-specialization-img {
+    width: 60%;
+    max-width: 220px;
   }
 }
 

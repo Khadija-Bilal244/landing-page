@@ -23,6 +23,7 @@ import sector31 from "../assets/31.png";
 import sector32 from "../assets/32.png";
 import sector33 from "../assets/33.png";
 import sector34 from "../assets/34.png";
+import ottomanCoffeehouse from "../assets/ottoman coffeehouse.webp"; // NOTE: update this filename to match the exact file you added to /assets
 
 const sectors = [
   { name: "Food, Beverages and Catering", image: sector11 },
@@ -62,6 +63,29 @@ function Sectors() {
           precision and excellence.
         </p>
       </div>
+
+      {/* Cafe & Restaurant Specialization Section */}
+      <div className="cafe-specialization-section">
+        <div className="cafe-specialization-content">
+          <img
+            src={ottomanCoffeehouse}
+            alt="Ottoman Coffeehouse"
+            className="cafe-specialization-img"
+          />
+          <div className="cafe-specialization-text">
+            <span className="cafe-specialization-tag">Our Trusted Client</span>
+            <h2>Specialized in Cafes &amp; Restaurants</h2>
+            <p>
+              We proudly work alongside some of the most loved names in the
+              food and hospitality industry, including Ottoman Coffeehouse.
+              Our deep understanding of the cafe and restaurant sector allows
+              us to deliver accounting solutions tailored to the fast-paced
+              demands of the hospitality business.
+            </p>
+          </div>
+        </div>
+      </div>
+
       <div className="sectors-image-grid">
         {sectors.map((sector, index) => (
           <div key={index} className="sector-box">

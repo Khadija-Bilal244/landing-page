@@ -11,12 +11,12 @@ import con6 from "../assets/con6.jpeg";
 const imageData = [
   {
     src: con1,
-    title: "International Lawyers Club Annual Conference 2024",
+    title: "International Lawyers Club Annual Conference",
     location: "London, UK",
   },
   {
     src: con2,
-    title: "International Lawyers Club Annual Conference 2024",
+    title: "International Lawyers Club Annual Conference",
     location: "London, UK",
   },
   { src: con3, title: "King Cross", location: "Kings Cross, London" },
@@ -28,7 +28,7 @@ const imageData = [
   },
   {
     src: con5,
-    title: "International Lawyers Club Annual Conference 2019",
+    title: "International Lawyers Club Annual Conference",
     location: "London, UK",
   },
   {

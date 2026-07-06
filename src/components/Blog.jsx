@@ -5,6 +5,8 @@ import descriptionImg6 from "../assets/conference.jpeg";
 import descriptionImg7 from "../assets/conference1.png";
 import descriptionImg8 from "../assets/conference2.png";
 import img from "../assets/blog.png";
+import parliamentImg from "../assets/parliament.png";
+import ottomanFoundersImg from "../assets/ottoman-founders.png"; 
 import Heading from "../common/Heading";
 import CardBlog from "./CardBlog";
 import AnimatedImages from "./AnimatedImages";
@@ -13,7 +15,7 @@ import "../styles/Blog.css";
 import vlog1 from "../assets/vlog1.mp4";
 import vlog2 from "../assets/vlog2.mp4";
 import vlog3 from "../assets/vlog3.mp4";
-
+import uniStudentTraining from "../assets/Uni student training.mp4"; 
 const valueText = "At our financial management service, we understand the importance of staying on top of your finances. We are here to help you reach your financial goals with professionalism & expertise.";
 
 const Blog = () => {
@@ -48,11 +50,10 @@ const Blog = () => {
           </div>
         </div>
       </div>
-
-      {/* Video Section */}
       <div className="video-section">
         <div className="video-section-border"></div>
         <Heading title="Our Featured Videos" />
+        <h2 className="video-description">Our founder had the honour of attending the prestigious Houses of Parliament, Westminster House of Lords, to address key issues faced by businesses in between Pakistan & Great Britain.</h2>
         <div className="video-container">
           <video
             src={vlog1}
@@ -88,6 +89,81 @@ const Blog = () => {
         <div className="video-section-border"></div>
       </div>
 
+      {/* UCP Student Training Section */}
+      <section className="student-training-section">
+        <div className="student-training-content">
+          <video
+            src={uniStudentTraining}
+            muted
+            autoPlay
+            loop
+            playsInline
+            controls
+            className="student-training-video"
+          >
+            <source src={uniStudentTraining} type="video/mp4" />
+          </video>
+          <div className="student-training-text">
+            <h3>UCP Student Training</h3>
+            <p>
+              This was UCP students' assistance on their project. We were glad
+              to host university students at our office and guide them
+              through hands-on training, helping them understand real-world
+              accounting and financial practices. Our goal was to support
+              their learning and equip them with the practical skills needed
+              to successfully complete their project.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Parliament Post Section */}
+      <div className="video-section-border"></div>
+      <section className="parliament-post">
+        <div className="parliament-post-card">
+          <img
+            src={parliamentImg}
+            alt="Upper House of Parliament, House of Lords, Westminster, London"
+            className="parliament-post-img"
+          />
+          <div className="parliament-post-info">
+            <span className="parliament-post-date">14th July 2023</span>
+            <h2 className="parliament-post-heading">
+              A Historic Visit to the House of Lords, Westminster
+            </h2>
+            <p className="parliament-post-desc">
+              Our founder represented Pakistani businesses at this landmark gathering in London.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Ottoman Coffeehouse Case Study Section */}
+      <div className="video-section-border"></div>
+      <section className="ottoman-case-study">
+        <div className="ottoman-case-study-card">
+          <img
+            src={ottomanFoundersImg}
+            alt="Founder of Nexus Accountants with the Founder of Ottoman Coffeehouse"
+            className="ottoman-case-study-img"
+          />
+          <div className="ottoman-case-study-info">
+            <span className="ottoman-case-study-tag">Client Success Story</span>
+            <h2 className="ottoman-case-study-heading">
+              Proudly Serving Ottoman Coffeehouse
+            </h2>
+            <p className="ottoman-case-study-desc">
+              M. Shahid, founder of Nexus Accountants, has served as the
+              trusted accountant for Ottoman Coffeehouse for several years,
+              helping the brand manage its finances as it grew into one of
+              the region's most recognized names in specialty coffee.
+              We're honoured to support their journey and continue building
+              on this long-standing partnership.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Blog Cards Section */}
       <div className="container">
         <Heading
@@ -108,7 +184,7 @@ const Blog = () => {
             className="conference-cover-img"
           />
           <h1 className="conference-heading">
-            UK, International Lawyers Club London Annual Conference 2024
+            UK, International Lawyers Club London Annual Conference
           </h1>
         </div>
 

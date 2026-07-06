@@ -18,7 +18,6 @@ const Services = () => {
         />
       </div>
 
-
       <div>
         <FeaturedCard />
       </div>
@@ -66,6 +65,7 @@ const Services = () => {
         </p>
 
         <div className="services-list">
+          {/* Existing Services */}
           <div className="service-item">Final Account Services</div>
           <div className="service-item">Financial Modeling</div>
           <div className="service-item">Budget/Forecasting</div>
@@ -78,6 +78,17 @@ const Services = () => {
           <div className="service-item">Corporate Planning</div>
           <div className="service-item">Due Diligence</div>
           <div className="service-item">Personal Tax Planning</div>
+          <div className="service-item">Business Startups &amp; Financial Planning</div>
+          <div className="service-item">Company Secretarial Services</div>
+          <div className="service-item">Financial Statements &amp; Compliance</div>
+          <div className="service-item">Corporate Tax Returns</div>
+          <div className="service-item">Self-Assessment</div>
+          <div className="service-item">Management Reporting &amp; Executive Summary</div>
+          <div className="service-item">Cash Flow Forecasting</div>
+          <div className="service-item">Business Plans</div>
+          <div className="service-item">Corporate Structuring</div>
+          <div className="service-item">Corporate Tax Planning</div>
+          <div className="service-item">Tax Planning for High-Net-Worth Individuals</div>
         </div>
       </div>
     </section>

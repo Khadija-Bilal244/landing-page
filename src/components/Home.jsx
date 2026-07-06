@@ -1,5 +1,5 @@
-
 import Hero from "./Hero";
+import HeroSlogan from "./HeroSlogan";
 import Superiority from "./Superiority";
 import Slider from "./Slider";
 import ContactForm from "./ContactForm";
@@ -15,6 +15,7 @@ function Home() {
   return (
     <>
       <Hero />
+      <HeroSlogan />
       <WhyChooseNexus/>
       <Superiority />
       <PopularServices/>
