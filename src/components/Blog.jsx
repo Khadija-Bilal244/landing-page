@@ -118,7 +118,7 @@ const Blog = () => {
       </section>
 
       {/* Parliament Post Section */}
-      <div className="video-section-border"></div>
+    
       <section className="parliament-post">
         <div className="parliament-post-card">
           <img
@@ -139,7 +139,6 @@ const Blog = () => {
       </section>
 
       {/* Ottoman Coffeehouse Case Study Section */}
-      <div className="video-section-border"></div>
       <section className="ottoman-case-study">
         <div className="ottoman-case-study-card">
           <img
