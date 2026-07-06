@@ -104,9 +104,9 @@ const Blog = () => {
             <source src={uniStudentTraining} type="video/mp4" />
           </video>
           <div className="student-training-text">
-            <h3>UCP Student Training</h3>
+            <h3>UCP Student's Training</h3>
             <p>
-              This was UCP students' assistance on their project. We were glad
+              This was University Of Central Punjab student's assistance on their project. We were glad
               to host university students at our office and guide them
               through hands-on training, helping them understand real-world
               accounting and financial practices. Our goal was to support
