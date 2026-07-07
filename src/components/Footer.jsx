@@ -47,7 +47,7 @@ function Footer() {
         <div className="footer-contact">
           <h2>Contact Us</h2>
           <p><i className="fas fa-phone"></i> Tel: +44 7540 188918</p>
-          <p><i className="fas fa-envelope"></i> Email: accounts@nexusaccountants.co.uk</p>
+          <p><i className="fas fa-envelope"></i> Email: imran@nexusaccountants.co.uk</p>
           <p><i className="fas fa-map-marker-alt"></i> Address: 8 Ashgrove Road Ilford England IG3 9XE</p>
 
           <div className="footer-message-us">
