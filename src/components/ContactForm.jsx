@@ -123,7 +123,7 @@ function ContactForm() {
         <div className="info-card">
           <span className="info-card-icon">📧</span>
           <h4>Email Us</h4>
-          <a href="mailto:accounts@nexusaccountants.co.uk">accounts@nexusaccountants.co.uk</a>
+          <a href="mailto:imran@nexusaccountants.co.uk">imran@nexusaccountants.co.uk</a>
           <span className="info-sub">We'll respond within 24 hours</span>
         </div>
         <div className="info-card">
