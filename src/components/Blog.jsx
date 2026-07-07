@@ -4,7 +4,7 @@ import descriptionImg from "../assets/blog1b.png";
 import descriptionImg6 from "../assets/conference.jpeg";
 import descriptionImg7 from "../assets/conference1.png";
 import descriptionImg8 from "../assets/conference2.png";
-import img from "../assets/blog.png";
+import img from "../assets/london.png";
 import parliamentImg from "../assets/parliament.png";
 import ottomanFoundersImg from "../assets/ottoman-founders.png"; 
 import Heading from "../common/Heading";

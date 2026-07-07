@@ -74,7 +74,7 @@ function Sectors() {
           />
           <div className="cafe-specialization-text">
             <span className="cafe-specialization-tag">Our Trusted Client</span>
-            <h2>Specialized in Cafes &amp; Restaurants</h2>
+            <h2>Specialised in Cafes &amp; Restaurants</h2>
             <p>
               We proudly work alongside some of the most loved names in the
               food and hospitality industry, including Ottoman Coffeehouse.

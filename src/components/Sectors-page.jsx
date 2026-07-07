@@ -47,7 +47,7 @@ const Help = () => {
           <div className="portfolio-description-text">
             <p>
               Nexus primarily supports small and medium-sized businesses across a wide range of industries, including many family-owned enterprises. While these businesses are experts in their own fields, they often benefit from experienced financial guidance to support growth, improve cash flow, manage costs, and adapt to changing market conditions. Our practical advice and tailored accounting solutions help businesses make confident decisions while remaining compliant with current UK tax and regulatory requirements.
-              We also work closely with high-net-worth individuals, entrepreneurs, and investors, providing strategic advice on business acquisitions, investments, and wealth management. Whether a transaction is financed through equity, debt, or a combination of both, we help structure it in a commercially sound and tax-efficient manner, ensuring compliance with UK legislation while supporting long-term financial success and sustainable returns.
+              We also work closely with businesses, entrepreneurs, and investors, providing strategic advice on business acquisitions, investments, and wealth management. Whether a transaction is financed through equity, debt, or a combination of both, we help structure it in a commercially sound and tax-efficient manner, ensuring compliance with UK legislation while supporting long-term financial success and sustainable returns.
             </p>
           </div>
           <img

@@ -2,10 +2,10 @@ import React, { useEffect, useRef } from "react";
 import "../styles/animate.css";
 
 import con1 from "../assets/con1.jpeg";
-import con2 from "../assets/con2.jpeg";
+import con5 from "../assets/con2.jpeg";
 import con3 from "../assets/con3.jpeg";
 import con4 from "../assets/con4.jpg";
-import con5 from "../assets/con5.jpeg";
+import con2 from "../assets/con5.jpeg";
 import con6 from "../assets/con6.jpeg";
 
 const imageData = [
